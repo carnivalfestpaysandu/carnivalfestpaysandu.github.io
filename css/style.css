@@ -72,8 +72,9 @@ h1 {
     max-width: 100%;
     
     color: transparent;
-    background: transparent url(../img/logo_carnival_web.png) no-repeat center;
+    /*background: transparent url(../img/logo_carnival_web.png) no-repeat center;*/
     text-shadow: none;
+    content: url(../img/logo_carnival_web.png);
     
     left: 0%;
     transform: scale(.5) rotate(-10deg) translate(-40%,-80%);
@@ -211,7 +212,7 @@ table {
 
 td {
     text-align: center;
-    color: #8d9c7b;
+    color: #8d9b7c;
 }
 
 th {
@@ -224,7 +225,7 @@ thead th {
 }
 
 tbody th {
-    color: #c65c28;
+    color: #b45215;
     font-size: 18px;
 }
 
@@ -257,4 +258,17 @@ tbody tr:nth-of-type(2n + 1) {
     z-index: 10;
     
     overflow-y: auto;
+}
+
+/*** Cuenta regresiva ***/
+.cuenta {
+    position: fixed;
+    bottom: 150px;
+    font-family: CarnivalFest;
+    font-size: 6em;
+    right: 50%;
+    transform: translate(50%, 0);
+    color: #000;
+    text-shadow: 0 0 4px #fff;
+    display: none;
 }
