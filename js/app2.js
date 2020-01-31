@@ -26,7 +26,7 @@ window.addEventListener('load', _ => {
 
 //// Routeo: eventos
 window.addEventListener("popstate", _ => {
-    console.log('Evento de pop');
+    // console.log('Pop');
 
     let ubicacion   = location.hash.substr(1),
         saneada     = returnSection(ubicacion);
@@ -40,7 +40,6 @@ window.addEventListener("popstate", _ => {
         // Verificar si no está intentando entrar al perfil de una banda
         if (saneada.indexOf('bandas/') > -1)
         {
-            // debugger
             let banda = saneada.split('/')[1],
                 elem = document.getElementById(saneada);
 
