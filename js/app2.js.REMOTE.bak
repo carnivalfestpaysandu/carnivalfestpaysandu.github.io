@@ -1,10 +1,10 @@
-const version = '0.3.62',
+const version = '0.3.3',
     secciones = [],
     data = {},
     rutas = {
         bandas: 'data/bandas.json'
     },
-    datetimeinicio = new Date('2020-02-07T19:00:00-03:00'),
+    datetimeinicio = new Date('2020-02-07T16:00:00-03:00'),
     contador = document.querySelector('.cuenta');
 
 console.log(`Iniciando v${version}`);
@@ -26,7 +26,7 @@ window.addEventListener('load', _ => {
 
 //// Routeo: eventos
 window.addEventListener("popstate", _ => {
-    console.log('Evento de pop');
+    // console.log('Pop');
 
     let ubicacion   = location.hash.substr(1),
         saneada     = returnSection(ubicacion);
@@ -40,7 +40,6 @@ window.addEventListener("popstate", _ => {
         // Verificar si no está intentando entrar al perfil de una banda
         if (saneada.indexOf('bandas/') > -1)
         {
-            // debugger
             let banda = saneada.split('/')[1],
                 elem = document.getElementById(saneada);
 
@@ -172,10 +171,7 @@ async function crearPerfil (banda)
     document.body.appendChild(nueva);
 
     // Recargar la sección a través del hash
-    // Por problemas en chromiums debo engañar al sistema y hacer un cambio doble
-    let mihash = location.hash;
-    location.hash = '#inicio';
-    location.hash = mihash;
+    location.hash = location.hash;
 }
 
 async function createBandas ()
@@ -226,20 +222,3 @@ function updateContador ()
 
     setTimeout(updateContador, 1000);
 }
-
-/// Gestión de menú móvil
-const anvorgesa = document.querySelector('.icon-menu'),
-    menuel = document.querySelector('nav');
-
-anvorgesa.addEventListener('click', _ => {
-    menuel.style.display = 'flex';
-
-    function ocultarMenu (evt)
-    {
-        menuel.style.removeProperty('display');
-
-        menuel.removeEventListener(ocultarMenu);
-    }
-
-    menuel.addEventListener('click', ocultarMenu);
-});

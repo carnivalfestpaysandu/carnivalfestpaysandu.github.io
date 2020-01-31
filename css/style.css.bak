@@ -8,9 +8,12 @@ html, body, div, section {
 /*** Variables ***/
 :root {
     --top-margin: 60px;
+<<<<<<< HEAD
     --high-color: #4ab701;
     --second-color: #8d9b7c;
     --second-high: #b45215;
+=======
+>>>>>>> c2c3c0fb4d7d13298514bb55f9d551a7afedfed7
     --highlight-color: #4ab701;
     --hightlight-alt-color: #b45215;
 }
@@ -61,10 +64,6 @@ body {
 }
 
 /*** Título principal y logo ***/
-.icon-menu {
-    display: none;
-}
-
 h1, nav {
     position: fixed;
     display: block;
@@ -431,34 +430,4 @@ https://avexdesigns.com/responsive-youtube-embed/ */
 .article-social:empty,
 .article-video:empty {
     display: none;
-}
-
-/**** Movil ****/
-@media(max-width: 1025px)
-{
-    nav {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        
-        background: rgba(0,0,0,.8);
-    }
-    
-    .icon-menu {
-        display: block;
-        position: fixed;
-        top: .3em;
-        right: .3em;
-        
-        color: #fff;
-        text-shadow:0 0 3px #000;
-        font-size: 1.8em;
-        cursor: pointer;
-    }
 }

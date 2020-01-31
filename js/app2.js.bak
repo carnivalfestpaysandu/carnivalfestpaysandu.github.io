@@ -4,7 +4,11 @@ const version = '0.3.62',
     rutas = {
         bandas: 'data/bandas.json'
     },
+<<<<<<< HEAD
     datetimeinicio = new Date('2020-02-07T19:00:00-03:00'),
+=======
+    datetimeinicio = new Date('2020-02-07T16:00:00-03:00'),
+>>>>>>> c2c3c0fb4d7d13298514bb55f9d551a7afedfed7
     contador = document.querySelector('.cuenta');
 
 console.log(`Iniciando v${version}`);
@@ -226,20 +230,3 @@ function updateContador ()
 
     setTimeout(updateContador, 1000);
 }
-
-/// Gestión de menú móvil
-const anvorgesa = document.querySelector('.icon-menu'),
-    menuel = document.querySelector('nav');
-
-anvorgesa.addEventListener('click', _ => {
-    menuel.style.display = 'flex';
-
-    function ocultarMenu (evt)
-    {
-        menuel.style.removeProperty('display');
-
-        menuel.removeEventListener(ocultarMenu);
-    }
-
-    menuel.addEventListener('click', ocultarMenu);
-});
