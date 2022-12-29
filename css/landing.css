@@ -19,6 +19,7 @@ body {
 
 body.landing {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -106,4 +107,19 @@ a.boton {
 a.cta {
     background: #d99552;
     color: #000;
+}
+
+.landing,
+.landing h2 {
+    font-family: sans;
+    text-decoration: none;
+    text-align: center;
+}
+
+.landing h2 {
+    font-size: 2em;
+}
+
+.landing p {
+    color: #666;
 }
