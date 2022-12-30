@@ -1,0 +1,31 @@
+[type=radio]:checked + label::after {
+    content: attr(title);
+    display: block;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+th {
+    padding: .3em 1em;
+}
+
+tr {
+    border-bottom: solid 1px #000;
+}
+
+tbody th:first-of-type {
+    text-align: right;
+}
+
+th:not(:nth-of-type(4)),
+tbody td:not(:last-of-type) {
+    text-align: center;
+    border-right: solid 1px #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    border: solid 1px #000;
+}

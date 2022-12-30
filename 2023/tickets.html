@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Carnival Fest 2023 - Entradas</title>
+        <link rel="stylesheet" href="css/tickets.css">
+    </head>
+    <body>
+        <h1>Carnival Fest Metal Camp 2023 - Entradas</h1>
+        <form action="https://dnaccess.rammserker.repl.co/api/request.php" method="POST" target="_self">
+            <fieldset class="entradas">
+                <legend>Entradas</legend>
+                <label for="qty">¿Cuántas entradas querés comprar?</label>
+                <select name="qty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10oMas">10 o más</option>
+                </select>
+
+                <p>¿Cómo querés pagar?</p>
+                <label title="Depósito a la cuenta BROU de Distrito Norte, vía transferencia o depósito en red de cobranzas. Costo del servicio: $10 por entrada">
+                    <input type="radio" name="pay" value="dep" checked>
+                    Depósito BROU (+$10/entrada)
+                </label>
+                <br>
+                <label title="Débito contado, crédito hasta en 12 pagos o depósito en Redpagos. Costo del servicio: $120 por entrada">
+                    <input type="radio" name="pay" value="han">
+                    Handy Link (Débito/Crédito/Redpagos) (+$120/entrada)
+                </label>
+                <p class="explain"></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Precio unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Entradas</th>
+                            <td>$ 1.500,00</td>
+                            <td>-</td>
+                            <td>$ -</td>
+                        </tr>
+                        <tr>
+                            <th>Servicio</th>
+                            <td>$ -</td>
+                            <td>-</td>
+                            <td>$ -</td>
+                        </tr>
+                        <tr class="total">
+                            <th colspan="3">
+                                Total a pagar
+                            </th>
+                            <td>$ -</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <fieldset class="contacto">
+                <legend>Datos de contacto</legend>
+                <label for="tel">Teléfono:</label>
+                <select name="code"></select>
+                <output for="code" name="pais">+598</output>
+                <input type="text" pattern="^\d[\d\s-]+" placeholder="99 999 999" name="tel" required>
+                <br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" required>
+                <br>
+                
+                <label for="via">
+                    ¿Por dónde prefiere que lo contactemos?
+                </label>
+                <select name="via">
+                    <option value="wap">Whatsapp</option>
+                    <option value="sms">SMS</option>
+                    <option value="email">E-mail</option>
+                </select>
+            </fieldset>
+            <input type="submit">
+        </form>
+
+        <script type="text/javascript" src="js/tickets.js"></script>
+    </body>
+</html>
