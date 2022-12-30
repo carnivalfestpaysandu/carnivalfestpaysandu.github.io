@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>Carnival Fest Metal Camp 2023</h1>
+        <img src="img/banner.jpg" alt="Banner Carnival Fest Metal Camp Paysandú 2023">
         <h2>Entradas</h2>
         <form action="https://dnaccess.rammserker.repl.co/api/request.php" method="POST" target="_self">
             <!--
@@ -97,7 +98,7 @@
                 <label for="tel">Teléfono:</label>
                 <select name="code"></select>
                 <output for="code" name="pais">+598</output>
-                <input type="text" pattern="^\d[\d\s-]+" placeholder="99 999 999" name="tel" required>
+                <input type="text" pattern="^\d[\d\s-]+" minlength="8" placeholder="99 999 999" name="tel" required>
                 <br>
 
                 <label for="email">E-mail:</label>
