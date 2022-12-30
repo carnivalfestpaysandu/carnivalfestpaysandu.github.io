@@ -25,6 +25,23 @@ h1, h2 {
     text-align: center;
 }
 
+legend {
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+    top: -.3em;
+}
+
+.info p {
+    margin: .6em 1em;
+    font-size: .9em;
+}
+
+.info a {
+    color: inherit;
+    font-weight: bold;
+}
+
 th {
     padding: .3em 1em;
 }
