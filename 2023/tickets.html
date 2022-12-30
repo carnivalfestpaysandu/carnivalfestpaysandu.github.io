@@ -7,8 +7,12 @@
         <link rel="stylesheet" href="css/tickets.css">
     </head>
     <body>
-        <h1>Carnival Fest Metal Camp 2023 - Entradas</h1>
+        <h1>Carnival Fest Metal Camp 2023</h1>
+        <h2>Entradas</h2>
         <form action="https://dnaccess.rammserker.repl.co/api/request.php" method="POST" target="_self">
+            <!--
+            <input type="radio" name="nav" id="nav1">
+            -->
             <fieldset class="entradas">
                 <legend>Entradas</legend>
                 <label for="qty">¿Cuántas entradas querés comprar?</label>
@@ -26,6 +30,7 @@
                 </select>
 
                 <p>¿Cómo querés pagar?</p>
+                <p class="explain"></p>
                 <label title="Depósito a la cuenta BROU de Distrito Norte, vía transferencia o depósito en red de cobranzas. Costo del servicio: $10 por entrada">
                     <input type="radio" name="pay" value="dep" checked>
                     Depósito BROU (+$10/entrada)
@@ -35,7 +40,6 @@
                     <input type="radio" name="pay" value="han">
                     Handy Link (Débito/Crédito/Redpagos) (+$120/entrada)
                 </label>
-                <p class="explain"></p>
 
                 <table>
                     <thead>
@@ -67,8 +71,14 @@
                         </tr>
                     </tbody>
                 </table>
+                <!--
+                <label for="nav2" class="nav-button">Siguiente</label>
+                -->
             </fieldset>
 
+            <!--
+            <input type="radio" name="nav" id="nav2">
+            -->
             <fieldset class="contacto">
                 <legend>Datos de contacto</legend>
                 <label for="tel">Teléfono:</label>
@@ -78,20 +88,27 @@
                 <br>
 
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" placeholder="correo@electronico.com" required>
                 <br>
                 
                 <label for="via">
-                    ¿Por dónde prefiere que lo contactemos?
+                    ¿Cuál es tu vía de contacto preferida?
                 </label>
                 <select name="via">
                     <option value="wap">Whatsapp</option>
                     <option value="sms">SMS</option>
                     <option value="email">E-mail</option>
                 </select>
+                <!--
+                <label for="nav1" class="nav-button">Paso anterior</label>
+                -->
             </fieldset>
-            <input type="submit">
+            <input type="submit" value="Confirmar entradas">
         </form>
+
+        <footer>
+            · Copyright Distrito Norte Producciones · 2022 ·
+        </footer>
 
         <script type="text/javascript" src="js/tickets.js"></script>
     </body>

@@ -1,10 +1,28 @@
-[type=radio]:checked + label::after {
-    content: attr(title);
-    display: block;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form,
+h1, h2 {
+    max-width: 800px;
+    width: 100%;
+    margin: .6em auto;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 th {
@@ -13,6 +31,11 @@ th {
 
 tr {
     border-bottom: solid 1px #000;
+}
+
+thead th {
+    background: #222;
+    color: #eee;
 }
 
 tbody th:first-of-type {
@@ -25,7 +48,82 @@ tbody td:not(:last-of-type) {
     border-right: solid 1px #ccc;
 }
 
+tbody tr:nth-of-type(3) > * {
+    background: #eee;
+}
+
 table {
     border-collapse: collapse;
     border: solid 1px #000;
+    
+    margin: 1em auto .5em;
+}
+
+.entradas p {
+    margin: .4em auto;
+}
+
+.explain {
+    font-size: .8em;
+    border: solid 1px #222;
+    border-radius: 5px;
+    padding: .6em;
+    
+    width: calc(100% - 4em);
+}
+
+fieldset {
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.contacto {
+    display: grid;
+    
+    grid-template-columns: max-content 1fr;
+    gap: .2em;
+}
+
+.contacto output,
+.contacto label {
+    text-align: right;
+}
+
+.contacto label {
+    grid-column-start: 1;
+}
+
+.contacto label[for=via] {
+    grid-column-end: 3;
+    text-align: left;
+    margin-top: 1em;
+}
+
+input[type=submit] {
+    margin: .6em auto;
+    
+    text-align: center;
+    font-weight: bold;
+    padding: .8em 1.2em;
+    background-color: #54B8F3;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    
+    transition: background-color .6s;
+}
+
+input[type=submit]:hover {
+    background-color: #468DB6;
+}
+
+footer {
+    text-align: center;
+    border-top: solid 1px #666;
+    padding: 2em 0 1.4em;
+    line-height: 1.2;
+    font-size: .8em;
+    background: #222;
+    color: #fafafa;
+    margin: 0;
 }
