@@ -104,5 +104,35 @@ function initSeccionContacto ()
     });
 }
 
+function initAsyncForm ()
+{
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async evt => {
+        console.log('Enviando...');
+        evt.preventDefault();
+
+        document.body.classList.add('sending');
+
+        const res = await fetch(form.action, {
+            method: form.method,
+            body: new URLSearchParams(new FormData(form))
+        }),
+            resjson = await res.json();
+
+        document.body.classList.remove('sending');
+
+        console.log(res);
+
+        if (!res.ok)
+        {
+            console.error('Error al enviar la consulta');
+            console.log(resjson);
+        }
+    });
+}
+
 initSeccionEntradas();
 initSeccionContacto();
+
+initAsyncForm();

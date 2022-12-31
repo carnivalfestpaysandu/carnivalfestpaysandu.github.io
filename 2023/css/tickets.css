@@ -165,3 +165,18 @@ footer {
     color: #fafafa;
     margin: 0;
 }
+
+body.sending::after {
+    content: 'Enviando pedido';
+    
+    display: flex;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #000a;
+    
+    font-weight: bold;
+    font-size: 4vmin;
+}
