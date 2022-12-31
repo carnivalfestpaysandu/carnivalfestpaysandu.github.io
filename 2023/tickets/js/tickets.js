@@ -38,10 +38,10 @@ function updateTicketTable (evt = {})
         unitqty = qtyel.value < 10 ? +qtyel.value : false;
 
     [...qtycell].forEach(el => el.innerText = unitqty);
-    subtikcell.innerText = `$ ${unitqty * 1500},00`;
-    servcell.innerText = `$ ${unitserv},00`;
-    subservcell.innerText = `$ ${unitqty * unitserv},00`;
-    totalcell.innerText = `$ ${(1500 + unitserv) * unitqty},00`;
+    subtikcell.innerText = `$${(unitqty * 1500).toLocaleString('es-UY')},00`;
+    servcell.innerText = `$${unitserv.toLocaleString('es-UY')},00`;
+    subservcell.innerText = `$${(unitqty * unitserv).toLocaleString('es-UY')},00`;
+    totalcell.innerText = `$${((1500 + unitserv) * unitqty).toLocaleString('es-UY')},00`;
 }
 
 function initSeccionEntradas ()
@@ -122,14 +122,32 @@ function initAsyncForm ()
 
         document.body.classList.remove('sending');
 
-        console.log(res);
-
         if (!res.ok)
         {
-            console.error('Error al enviar la consulta');
-            console.log(resjson);
+            // console.error('Error al enviar la consulta');
+            // console.log(resjson);
+            showDialog('Hubo un error', 'Lamentablemente no se pudo registrar tu pedido de compra. Intenta nuevamente en unos minutos.', false);
         }
+
+        form.reset();
+
+        showDialog('¡Pedido enviado!', 'Tu pedido de entradas fue enviado con éxito. En breve se estará comunicando alguien del staff de Distrito Norte para continuar la compra. ¡Nos vemos en febrero!');
     });
+}
+
+function showDialog (titulo, cuerpo, exito = true)
+{
+    const dialog = document.querySelector('dialog'),
+        titel = dialog.querySelector('h3'),
+        parel = dialog.querySelector('p'),
+        close = dialog.querySelector('.close');
+
+    titel.innerText = titulo;
+    parel.innerText = cuerpo;
+
+    close.addEventListener('click', evt => dialog.close());
+
+    dialog.showModal();
 }
 
 initSeccionEntradas();
