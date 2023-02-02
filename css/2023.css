@@ -53,14 +53,14 @@ nav li:first-of-type::before {
     position: absolute;
     inset: 0;
     
-    z-index: -1;
+    z-index: -2;
 }
 
 nav li:first-of-type::after {
     content: "";
     position: absolute;
     inset: 1.5em;
-    z-index: 0;
+    z-index: -1;
     
     border: solid 3px #a00a;
 }
