@@ -1,11 +1,23 @@
+/* Desarrollado por Maximiliano Fernández
+ * 2023
+ * ***/
 :root
 {
     --clr-text: #ccc;
-    --clr-surface: #1e1e2a;
+    --clr-surface: #1d1f2c;
     --clr-sec-surface: #2cbac6;
     --clr-primary: #2cbac6;
     --clr-secondary: #fe2c49;
     --clr-accent: #c3e602;
+    
+    --siz-fluid-0: clamp(1.00rem, 0.95rem + 0.25vw, 1.25rem);
+    --siz-fluid-1: clamp(1.20rem, 1.07rem + 0.68vw, 1.88rem);
+    --siz-fluid-2: clamp(1.44rem, 1.17rem + 1.37vw, 2.81rem);
+    --siz-fluid-3: clamp(1.73rem, 1.23rem + 2.49vw, 4.22rem);
+    --siz-fluid-4: clamp(2.07rem, 1.22rem + 4.25vw, 6.33rem);
+    --siz-fluid-5: clamp(2.49rem, 1.09rem + 7.00vw, 9.49rem);
+
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after
@@ -28,22 +40,23 @@ header, footer, main
 body
 {
     min-height: 100vh;
-    font: 1rem/calc(1em + 0.5rem) system-ui;
+    font: var(--siz-fluid-0, 1em)/calc(1em + .5rem) system-ui;
+    
     color: var(--clr-text);
     background:
         var(--clr-surface);
-
-}
-
-h1
-{
-    content: url(../img/logo_baja.png);
-    max-width: 30vw;
 }
 
 h1, h2, h3, h4
 {
     color: var(--clr-accent);
+}
+
+h1
+{
+    content: url(../img/logo_baja.png);
+    max-width: calc(var(--siz-fluid-4) * 5);
+    margin: .5em;
 }
 
 a
@@ -53,7 +66,29 @@ a
 
 a:hover, a:focus
 {
-    color: var(--clr-secondary);
+    color: var(--clr-accent);
+}
+
+nav
+{
+    text-align: center;
+}
+
+nav a
+{
+    text-decoration: none;
+    
+    font-weight: bold;
+    font-size: var(--siz-fluid-1, 1.2em);
+    
+    margin: .4em;
+}
+
+nav.social
+{
+    width: 100%;
+    order: -1;
+    text-align: right;
 }
 
 header
@@ -64,13 +99,6 @@ header
     align-items: center;
     
     margin-bottom: 2rem;
-}
-
-header .social
-{
-    width: 100%;
-    order: -1;
-    text-align: right;
 }
 
 main
