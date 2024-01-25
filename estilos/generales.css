@@ -1,0 +1,330 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+.primeraSeccion {
+    margin-top: -180px;
+    background-color: rgba(0, 0, 0, 0.952);
+    background-image: url('../recursos/imagenes/fondo3.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    height: 200vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 104px;
+   
+  
+   
+}
+
+.segundaSeccion{
+    background-color: rgba(0, 0, 0, 0.952);
+    background-image: url('../recursos/imagenes/fondo4FHD.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: auto;
+    padding-top: 15vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    
+}
+
+.segundaSeccion .col{
+   display: flex;
+   justify-content: center;
+}
+.seccionGrilla{
+    background-color: rgba(0, 0, 0, 0.952);
+    background-image: url('../recursos/imagenes/mascortoLineSB.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    height: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw;
+}
+
+
+.grilla{
+    display: block;
+    width: 130vmin;
+    min-width: 150px;
+    max-width: 1920px;
+    padding:0;
+    /* 
+    margin: 0 auto;
+   
+    background-image: url('../recursos/imagenes/bandasFHD.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.container-logo{
+    position: relative;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    background-attachment: fixed; 
+}
+#logo{
+   
+    display: block;
+    min-width: 200px;
+    max-width: 700px;
+   object-fit: cover;
+    margin: 0 auto;
+
+}
+h2{
+    color: white;
+}
+
+.mapa{
+    border-radius: 30px;
+}
+
+.zona{
+    margin-top: 15vh;
+}
+
+.video{
+    border-radius: 30px;
+    width: 100%;
+}
+
+.col-sm-12 {
+  margin-bottom: 40px;
+}
+
+.col-lg-12 {
+  margin-bottom: 40px;
+}
+.col-lg-12 .video{
+  width: 100%;
+  height: 500px;
+}
+
+.grillaIndex{
+    border-radius: 30px;
+}
+
+
+
+
+h2{
+    font-family: 'Deathknell';
+     font-weight: normal; 
+     font-style: normal;
+     font-size: 100px;
+    
+   
+      color: green;
+    
+     
+    
+  }
+
+  .carnival-font{
+    font-family: 'Carnivalee Freakshow';
+     font-weight: normal; 
+     font-style: normal;
+     font-size: 50px;
+    
+   
+      color: rgb(0, 0, 0);
+  }
+
+  .second-font{
+    font-family: 'RUSTY ATTACK DEMO';
+     font-weight: normal; 
+     font-style: normal;
+     font-size: 50px;
+     color: white;
+  }
+
+  .nav-item a {
+    font-size: 25px;
+  }
+
+
+  .entradas{
+    border: 3px solid #ffffff;
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff;
+  
+  animation: parpadeo 1.2s infinite; 
+    height: 25vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .entradas h2{
+    font-size: 10vh;
+    color: white;
+    -webkit-text-stroke: 1px rgba(56, 56, 56, 0.829); 
+    
+  }
+
+  .entradas h2 a{
+    text-decoration: none;
+    color: white;
+  }
+  .lugar-font{
+    font-family: 'Carnivalee Freakshow';
+     font-weight: normal; 
+     font-style: normal;
+     font-size: 5vw;
+    color: white;
+    -webkit-text-stroke: 1.5px rgba(85, 85, 85, 0.829);
+  }
+
+  .lugar-font p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .spot{
+    border-radius: 20px;
+  }
+  
+  .spotify{
+    width:"80%" ;
+    height:"20%";
+  }
+  
+ 
+
+@keyframes parpadeo {
+    0%, 100% {
+        border-color: transparent; 
+    }
+    50% {
+        border-color: #ffffff; 
+    }
+}
+  html{
+    width: 100%;
+  }
+
+
+  
+
+  
+  @media only screen and (max-width: 1200px) {
+    .segundaSeccion {
+      height: auto;
+        
+         
+      }
+
+      .col-lg-12 .video{
+        width: 100%;
+        height: 400px;
+      }
+  }
+
+  @media only screen and (max-width: 980px) {
+    .primeraSeccion {
+          margin-top: -80px;
+          background-color: rgba(0, 0, 0, 0.952);
+          background-image: url('../recursos/imagenes/fondo5.jpg');
+          background-position: top center;
+         
+          background-repeat: no-repeat;
+          height: 180vh;
+         
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 40px;
+        
+        
+         
+      }
+      
+      .segundaSeccion{
+        height: auto;
+     }
+     .segundaSeccion .col-sm-12{
+      margin-bottom: 20px;
+   }
+      
+  }
+  @media only screen and (max-width: 769px) {
+   
+    
+    .segundaSeccion{
+      height: auto;
+      padding-top: 18vh;
+    }
+    
+    .segundaSeccion .col-sm-12{
+      margin-bottom: 20px;
+   }
+
+   .segundaSeccion .col-lg-12{
+    margin-bottom: 20px;
+ }
+   .col-lg-12 .video{
+    width: 100%;
+    height: 315px;
+  }
+  }
+
+  @media only screen and (max-width: 584px) {
+    .primeraSeccion {
+          height: 100vh;
+          margin-top: -20px;
+    }
+    
+    .segundaSeccion{
+      height: auto;
+      padding-top: 18vh;
+    }
+    
+    .segundaSeccion .col-sm-12{
+      margin-bottom: 20px;
+   }
+      
+  }
+
+
+  @media only screen and (max-width: 300px) {
+    .primeraSeccion {
+          height: 100vh;
+ 
+    }
+    
+    .segundaSeccion{
+      height: auto;
+      padding-top: 18vh;
+    }
+    .segundaSeccion .video{
+      width: 200px;
+      
+    }
+    
+      
+  }
+
+
+

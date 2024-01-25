@@ -1,0 +1,32 @@
+
+
+.sectionMap{
+   
+    background-color: rgba(0, 0, 0, 0.952);
+    background-image: url('../recursos/imagenes/fondo2.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+.mapa{
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff; 
+    
+    animation: parpadeo 2.2s infinite; 
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        border-color: transparent; 
+    }
+    50% {
+        border-color: #ffffff; 
+    }
+}
+
