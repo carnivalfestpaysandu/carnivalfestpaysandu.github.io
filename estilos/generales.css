@@ -309,6 +309,15 @@ h2{
     
     height:80px;
   }
+
+  .lugar-font{
+    font-family: 'Carnivalee Freakshow';
+     font-weight: normal; 
+     font-style: normal;
+     font-size: 5vw;
+    color: white;
+    -webkit-text-stroke: 0.5px rgba(85, 85, 85, 0.829);
+  }
    
       
   }
