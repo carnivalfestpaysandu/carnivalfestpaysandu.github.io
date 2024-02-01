@@ -16,8 +16,9 @@ body{
     height: 200vh;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 104px;
-   
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: end;
   
    
 }
@@ -197,7 +198,7 @@ h2{
     font-family: 'Carnivalee Freakshow';
      font-weight: normal; 
      font-style: normal;
-     font-size: 5vw;
+     font-size: 3vw;
     color: white;
     -webkit-text-stroke: 1.5px rgba(85, 85, 85, 0.829);
   }
@@ -210,10 +211,29 @@ h2{
   .spot{
     border-radius: 20px;
   }
+
+  #videoSpot{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+
+
+  
+  .videoContainer{
+    width: 55%;
+    
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .videoContainer div{
+     height: 100%;
+  }
   
   .spotify{
     width:"80%" ;
-    height:"20%";
+    height:"40%";
   }
   
  
@@ -241,11 +261,33 @@ h2{
          
       }
 
+      
       .col-lg-12 .video{
         width: 100%;
         height: 400px;
       }
+
+      .videoContainer{
+        width: 65%;
+        
+        margin-left: 0;
+        margin-right: 0;
+      }
+      
   }
+
+  @media only screen and (max-width: 1100px) {
+    
+
+      .videoContainer{
+        width: 85%;
+        
+        margin-left: 0;
+        margin-right: 0;
+      }
+      
+  }
+
 
   @media only screen and (max-width: 980px) {
     .primeraSeccion {
@@ -259,7 +301,7 @@ h2{
          
           display: flex;
           align-items: flex-end;
-          padding-bottom: 40px;
+          padding-bottom: 15%;
         
         
          
@@ -271,6 +313,8 @@ h2{
      .segundaSeccion .col-sm-12{
       margin-bottom: 20px;
    }
+
+   
       
   }
   @media only screen and (max-width: 769px) {
@@ -303,10 +347,14 @@ h2{
   }
   }
 
+
+  
+
   @media only screen and (max-width: 584px) {
     .primeraSeccion {
           height: 100vh;
           margin-top: -20px;
+          padding-bottom: 5%;
     }
     
     .segundaSeccion{
@@ -332,6 +380,18 @@ h2{
     -webkit-text-stroke: 0.5px rgba(85, 85, 85, 0.829);
   }
    
+      
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .primeraSeccion {
+          padding-bottom: 25%;
+ 
+    }
+    
+    
+    
       
   }
 
