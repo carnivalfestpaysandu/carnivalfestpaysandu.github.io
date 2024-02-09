@@ -20,7 +20,7 @@ else if (saneada.indexOf("bandas/") > -1) {
 
 function returnSection(e) {
     let n = secciones.filter(n => n == e);
-    return e = n.length > 0 ? e : "inicio"
+    return e = n.length > 0 ? e : "bandas"
 }
 
 
@@ -47,45 +47,48 @@ async function crearPerfil(e) {
     }), d.description.split("\n").forEach(e => { const n = document.createElement("p"); n.innerHTML = e, i.appendChild(n) }); let c = document.createElement("p"), s = new Date(data.bandas[e].event); c.innerHTML = `${data.bandas[e].name} estará tocando en el Carnival Fest Paysandú el día\n    <a href="#programa" alt="Ver actividades"><time datetime="${data.bandas[e].event}">${s.toLocaleString("es-UY", { weekday: "long", day: "numeric" })} a las ${s.toLocaleString("es-UY", { hour: "numeric", minute: "numeric" })}</time></a>\n    ¡No te lo pierdas!`, i.appendChild(c), null != d.video && -1 == d.video.indexOf("facebook") ? o.innerHTML = `<iframe\n        width="560"\n        height="315"\n        src="https://www.youtube-nocookie.com/embed/${d.video}?rel=0"\n        frameborder="0"\n        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"\n        allowfullscreen></iframe>` : o.classList.add("profile-no-video"), document.body.appendChild(n); let l = location.hash; location.hash = "#inicio", location.hash = l
 } async function createBandas() {
     const e = document.querySelector("#bandas article"), n = document.getElementById("tplBanda"),
-        a = [{ id: "aguas", event: "2020-02-07T19:00:00-03:00", name: "Aguas Turbias" },
-        { id: "ak47", event: "2020-02-07T20:00:00-03:00", name: "Ak47" },
-        { id: "alpha", event: "2020-02-07T20:00:00-03:00", name: "Alpha" },
-        { id: "apneuma", event: "2020-02-07T23:00:00-03:00", name: "Apneuma" },
-        { id: "barathuja", event: "2020-02-07T23:00:00-03:00", name: "Barathuja" },
-        { id: "cerebral", event: "2020-02-07T22:00:00-03:00", name: "Cerebral" },
-        { id: "certera", event: "2020-02-07T22:00:00-03:00", name: "Certera" },
-        { id: "climatic", event: "2020-02-07T22:00:00-03:00", name: "Climatic Terra" },
-        { id: "disector", event: "2020-02-07T23:00:00-03:00", name: "Disector" },
-        { id: "drrocka", event: "2020-02-07T23:00:00-03:00", name: "Dr Rocka" },
-        { id: "mutante", event: "2020-02-07T23:00:00-03:00", name: "El Poderoso Mutante" },
-        { id: "escarnio", event: "2020-02-07T22:00:00-03:00", name: "Escarnio" },
-        { id: "feta", event: "2020-02-07T23:00:00-03:00", name: "Feta" },
-        { id: "fuego", event: "2020-02-07T23:00:00-03:00", name: "Fuego" },
-        { id: "genoma", event: "2020-02-07T23:00:00-03:00", name: "Genoma" },
-        { id: "herrumbre", event: "2020-02-07T23:00:00-03:00", name: "Herrumbre" },
-        { id: "hueso", event: "2020-02-07T23:00:00-03:00", name: "Hueso" },
-        { id: "insano", event: "2020-02-09T00:00:00-03:00", name: "Insano" },
-        { id: "insectas", event: "2020-02-09T00:00:00-03:00", name: "Insectas" },
-        { id: "leviathan", event: "2020-02-09T00:00:00-03:00", name: "Leviathan" },
-        { id: "licaon", event: "2020-02-09T00:00:00-03:00", name: "Licaón" },
-        { id: "losna", event: "2020-02-09T00:00:00-03:00", name: "Losna" },
-        { id: "lyra", event: "2020-02-07T23:00:00-03:00", name: "Lyra" },
-        { id: "pecho", event: "2020-02-09T00:00:00-03:00", name: "Pecho E Fierro" },
-        { id: "razaplaga", event: "2020-02-09T00:00:00-03:00", name: "Razaplaga" },
-        { id: "retro", event: "2020-02-09T00:00:00-03:00", name: "Retro Satan" },
-        { id: "ritual", event: "2020-02-09T00:00:00-03:00", name: "Ritual de Nacimiento" },
-
-        { id: "ruta", event: "2020-02-09T14:00:00-03:00", name: "Ruta 504" },
-        { id: "sangria", event: "2020-02-09T14:00:00-03:00", name: "Sangria" },
-        { id: "septerium", event: "2020-02-09T14:00:00-03:00", name: "Septerium" },
-        { id: "sistema", event: "2020-02-09T14:00:00-03:00", name: "Sistema Diez" },
-        { id: "solarcodex", event: "2020-02-09T14:00:00-03:00", name: "Solar Codex" },
-        { id: "southern", event: "2020-02-09T14:00:00-03:00", name: "Southern Rising" },
-        { id: "moors", event: "2020-02-09T14:00:00-03:00", name: "The Moors" },
-
-
-        { id: "vademekhum", event: "2020-02-07T21:00:00-03:00", name: "Vademekhum" },
-        { id: "vonzo", event: "2020-02-07T21:00:00-03:00", name: "Vonzo" }
+        a = [
+        {id: "aeternum", event: "2024-02-09T17:30:00-03:00", name: "Aeternum"},
+        { id: "aguas", event: "2024-02-10T19:45:00-03:00", name: "Aguas Turbias" },
+        { id: "ak47", event: "2024-02-09T18:15:00-03:00", name: "Ak47" },
+        { id: "alpha", event: "2024-02-10T20:30:00-03:00", name: "Alpha" },
+        { id: "apneuma", event: "2024-02-10T22:00:00-03:00", name: "Apneuma" },
+        { id: "barathuja", event: "2024-02-10T16:45:00-03:00", name: "Barathuja" },
+        { id: "cerebral", event: "2024-02-11T20:15:00-03:00", name: "Cerebral" },
+        { id: "certera", event: "2024-02-11T21:00:00-03:00", name: "Certera" },
+        { id: "climatic", event: "2024-02-09T01:00:00-03:00", name: "Climatic Terra" },
+        { id: "desfragmentaria", event: "2024-02-11T16:30:00-03:00", name: "Desfragmentaria" },
+        { id: "disector", event: "2024-02-11T21:45:00-03:00", name: "Disector" },
+        { id: "drrocka", event: "2024-02-10T17:30:00-03:00", name: "Dr Rocka" },
+        { id: "mutante", event: "2024-02-09T19:45:00-03:00", name: "El Poderoso Mutante" },
+        { id: "escarnio", event: "2024-02-09T00:15:00-03:00", name: "Escarnio" },
+        { id: "feta", event: "2024-02-11T17:15:00-03:00", name: "Feta" },
+        { id: "fuego", event: "2024-02-09T23:30:00-03:00", name: "Fuego" },
+        { id: "genoma", event: "2024-02-11T19:30:00-03:00", name: "Genoma" },
+        { id: "herrumbre", event: "2024-02-10T01:00:00-03:00", name: "Herrumbre" },
+        { id: "hueso", event: "2024-02-09T22:00-03:00", name: "Hueso" },
+        { id: "impro", event: "2024-02-09T16:00:00-03:00", name: "Impro" },
+        { id: "insano", event: "2024-02-11T18:45:00-03:00", name: "Insano" },
+        { id: "insectas", event: "2024-02-10T10:00:00-03:00", name: "Insectas" },
+        { id: "leviathan", event: "2024-02-10T01:45:00-03:00", name: "Leviathan" },
+        { id: "licaon", event: "2024-02-11T00:00:00-03:00", name: "Licaon" },
+        { id: "losna", event: "2024-02-09T23:30:00-03:00", name: "Losna" },
+        { id: "lyra", event: "2024-02-10T21:15:00-03:00", name: "Lyra" },
+        { id: "malditosacampantes", event: "2024-02-09T16:45:00-03:00", name: "Malditos Acampantes" },
+        { id: "pecho", event: "2024-02-09T01:45:00-03:00", name: "Pecho E Fierro" },
+        { id: "razaplaga", event: "2024-02-09T19:00:00-03:00", name: "Razaplaga" },
+        { id: "retro", event: "2023-02-11T23:15:00-03:00", name: "Retro Satan" },
+        { id: "ritual", event: "2024-02-10T00:15:00-03:00", name: "Ritual de Nacimiento" },
+        { id: "ruta", event: "2024-02-11T15:45:00-03:00", name: "Ruta 504" },
+        { id: "sangria", event: "2024-02-11T22:30:00-03:00", name: "Sangria" },
+        { id: "septerium", event: "2024-02-10T18:15:00-03:00", name: "Septerium" },
+        { id: "sistema", event: "2024-02-10T22:45:00-03:00", name: "Sistema Diez" },
+        {id: "slipgoat", event: "2024-02-10T16:00:00-03:00", name: "Slipgoat"},
+        { id: "solarcodex", event: "2024-02-09T21:15:00-03:00", name: "Solar Codex" },
+        { id: "southern", event: "2024-02-10T23:30:00-03:00", name: "Southern Rising" },
+        { id: "moors", event: "2024-02-11T15:00:00-03:00", name: "The Moors" },
+        { id: "vademekhum", event: "2024-02-09T22:45:00-03:00", name: "Vademekhum" },
+        { id: "vonzo", event: "2024-02-11T18:00:00-03:00", name: "Vonzo" }
         ]; a.map(e => (e.event = new Date(e.event), e.dia = 3, e.event < new Date("2020-02-09T03:00:00-03:00") && (e.dia = 2),
             e.event < new Date("2020-02-08T03:00:00-03:00") && (e.dia = 1), e)).sort((e, n) => e.event - n.event);
     data.bandas = a.reduce((e, n) => (e[n.id] = n, e), {}), a.forEach(a => { let t = n.content.cloneNode(!0), i = t.querySelector("img"); t.querySelector("a").href = `#bandas/${a.id}`, i.src = `../img2020/bandas/${a.id}/logo.png`, i.alt = a.name, e.appendChild(t), secciones.push(`bandas/${a.id}`) })
